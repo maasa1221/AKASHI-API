@@ -4,7 +4,7 @@ const BASE_URL = process.env.BASE_URL;
 const COMPANY_ID = process.env.COMPANY_ID;
 const API_KEY = process.env.API_KEY;
 
-export async function akashiClient(type) {
+export async function akashiClient(response, type) {
   const res = await fetch(
     `${BASE_URL}${COMPANY_ID}/stamps?token=${API_KEY}&type=${type}`,
     {
